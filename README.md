@@ -9,9 +9,10 @@
  1. Copier `.env` vers `.env.local` et changer `DATABASE_URL`
  2. Créer la base de données:  
     `symfony console doctrine:database:create`
- 3. Créer les entités:
+ 3. Créer les entités:  
     `symfony console make:entity NOM_ENTITE`
- 4. Créer les migrations:
+ 4. Créer les migrations:  
     `symfony console make:migration`
- 5. Executer les migrations:
+ 5. Executer les migrations:  
     `symfony console doctrine:migrations:migrate`
+
