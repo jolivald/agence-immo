@@ -2,6 +2,12 @@
 
  1. [Présentation du projet](https://www.youtube.com/watch?v=82yVPNwC8cY)
  2. [Nos premières pages](https://www.youtube.com/watch?v=TjHRk1Kk4JI)
+ 3. [Découverte de doctrine](https://www.youtube.com/watch?v=Gv7EUDzq2Z8&t=333s)
+ 4. [CRUD des biens immobiliers](https://www.youtube.com/watch?v=6Ryu7-VSV5k&t=2s)
+ 5. [Valider les données](https://www.youtube.com/watch?v=dAcCWKxQKxI)
+ 6. [Le composant Security](https://www.youtube.com/watch?v=5LfSTeyvyuM)
+ 7. [Paginer les biens](https://www.youtube.com/watch?v=9gFhvApgM20)
+ 8. [Filtrer les biens](https://www.youtube.com/watch?v=fRJJKxwQDf0)
 
 
 ## Notes
