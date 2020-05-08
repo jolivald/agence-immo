@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <title>Demande de contact pour {{ contact.property.title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+    <tr>
+      <td style="font-size:0px;padding:10px 25px;word-break:break-word;">Nom du bien</td>
+      <td><a href="{{ url('property.show', {id: contact.property.id, slug: contact.property.slug }) }}">
+        {{ contact.property.title }}
+      </a></td>
+    </tr>
+    <tr>
+      <td style="font-size:0px;padding:10px 25px;word-break:break-word;">Prénom</td>
+      <td>{{ contact.firstname }}</td>
+    </tr>
+    <tr>
+      <td style="font-size:0px;padding:10px 25px;word-break:break-word;">Nom</td>
+      <td>{{ contact.lastname }}</td>
+    </tr>
+    <tr>
+      <td style="font-size:0px;padding:10px 25px;word-break:break-word;">Téléphone</td>
+      <td>{{ contact.phone }}</td>
+    </tr>
+    <tr>
+      <td style="font-size:0px;padding:10px 25px;word-break:break-word;">Email</td>
+      <td>{{ contact.email }}</td>
+    </tr>
+    <tr>
+      <td style="font-size:0px;padding:10px 25px;word-break:break-word;">Message</td>
+      <td>{{ contact.message | nl2br }}</td>
+    </tr>
+    <tr>
+      <td style="font-size:0px;padding:10px 25px;word-break:break-word;">
+        <p style="border-top:solid 4px #F45E43;font-size:1;margin:0px auto;width:100%;"> </p>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+        <div style="font-family:helvetica;font-size:20px;line-height:1;text-align:left;color:#F45E43;">Hello World</div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

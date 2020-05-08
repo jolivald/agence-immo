@@ -8,6 +8,9 @@
  6. [Le composant Security](https://www.youtube.com/watch?v=5LfSTeyvyuM)
  7. [Paginer les biens](https://www.youtube.com/watch?v=9gFhvApgM20)
  8. [Filtrer les biens](https://www.youtube.com/watch?v=fRJJKxwQDf0)
+ 9. [Gestion des options](https://www.youtube.com/watch?v=gZ4R_Ooq4LA)
+10. [Image à la une](https://www.youtube.com/watch?v=OZBVd4ZTIqk)
+11. [Formulaire de contact](https://www.youtube.com/watch?v=BcTFEOA1Io4)
 
 
 ## Notes
