@@ -24,6 +24,8 @@ class PropertyRepository extends ServiceEntityRepository
 
     private function findVisibleQueryBuilder(): QueryBuilder {
         return $this->createQueryBuilder('p')
+            ->select('p', 'pics')
+            ->leftJoin('p.pictures', 'pics')
             ->where('p.sold = false');
 
     }
@@ -42,7 +44,7 @@ class PropertyRepository extends ServiceEntityRepository
         }
         if ($search->getLat() && $search->getLng() && $search->getDistance()){
             $query = $query
-                ->select('p')
+                //->select('p')
                 ->andWhere('(6353 * ASIN(SQRT('
                     .'POWER(SIN((p.lat - :lat ) * pi() / 180 / 2 ), 2)'
                     .'+ COS(p.lat * pi() / 180)'
