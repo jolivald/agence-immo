@@ -11,6 +11,11 @@
  9. [Gestion des options](https://www.youtube.com/watch?v=gZ4R_Ooq4LA)
 10. [Image à la une](https://www.youtube.com/watch?v=OZBVd4ZTIqk)
 11. [Formulaire de contact](https://www.youtube.com/watch?v=BcTFEOA1Io4)
+12. [Symfony Encore](https://www.youtube.com/watch?v=KjC8VdQUFbI)
+13. [Gestion des photos](http://e-learning.alaji.fr/mod/hvp/view.php?id=8636)
+14. [Géolocalisation](http://e-learning.alaji.fr/mod/hvp/view.php?id=8637)
+15. [Le problème n+1](https://www.youtube.com/watch?v=LtoRB9mOBeM)
+16. [Bundle reCAPTCHA](https://www.youtube.com/watch?v=sNmpddaseK8)
 
 
 ## Notes

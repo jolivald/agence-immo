@@ -15,17 +15,21 @@
   {% endif %}
   <div class="row">
     <div class="col-md-8">
-      {% if property.filename %}
-        <img src="{{ vich_uploader_asset(property, 'imageFile') | imagine_filter('medium') }}"
-          class="" alt=""
-          style="width: 100%; height: auto"
-        />
-      {% else %}
-        <img src="{{ '/images/properties/empty.jpg' | imagine_filter('medium') }}"
-          class="" alt=""
-          style="width: 100%; height: auto"
-        />
-      {% endif %}
+      <div data-slider>
+        {% if property.pictures is empty %}
+          <img src="{{ '/images/properties/empty.jpg' | imagine_filter('medium') }}"
+            class="" alt=""
+            style="width: 100%; height: auto"
+          />
+        {% else %}
+          {% for picture in property.pictures %}
+            <img src="{{ vich_uploader_asset(picture, 'imageFile') | imagine_filter('medium') }}"
+              class="" alt=""
+              style="width: 100%; height: auto"
+            />
+          {% endfor %}
+        {% endif %}
+      </div>
     </div>
     <div class="col-md-4">
       <h1>{{ property.title }}</h1>
@@ -33,8 +37,12 @@
       <div class="text-primary" style="font-size: 2rem; font-weight: bold">
         {{ property.formattedPrice }} €
       </div>
-      <a href="#" class="btn btn-primary">Contacted l'agence</a>
-      <div id="contactForm" class="mt-4">
+      <a href="#" id="contactButton" class="btn btn-primary"
+        {% if form.vars.submitted %}style="display: none"{% endif %}
+      >Contacted l'agence</a>
+      <div id="contactForm" class="mt-4"
+        {% if not form.vars.submitted %}style="display: none"{% endif %}
+      >
         {{ form_start(form) }}
           <div class="row">
             <div class="col">{{ form_row(form.firstname) }}</div>
@@ -90,6 +98,12 @@
         {% endfor %}
       </ul>
     </div>
+
+    <div id="map" style="width: 100%; height: 400px" class="mb-4"
+      data-lat="{{ property.lat }}"
+      data-lng="{{ property.lng }}"
+    ></div>
+
   </div>
 </div>
 {% endblock %}
