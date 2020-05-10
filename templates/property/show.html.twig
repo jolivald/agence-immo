@@ -15,16 +15,18 @@
   {% endif %}
   <div class="row">
     <div class="col-md-8">
-      {% if property.picture %}
-        <img src="{{ vich_uploader_asset(property.picture, 'imageFile') | imagine_filter('medium') }}"
-          class="" alt=""
-          style="width: 100%; height: auto"
-        />
-      {% else %}
+      {% if property.pictures is empty %}
         <img src="{{ '/images/properties/empty.jpg' | imagine_filter('medium') }}"
           class="" alt=""
           style="width: 100%; height: auto"
         />
+      {% else %}
+        {% for picture in property.pictures %}
+          <img src="{{ vich_uploader_asset(picture, 'imageFile') | imagine_filter('medium') }}"
+            class="" alt=""
+            style="width: 100%; height: auto"
+          />
+        {% endfor %}
       {% endif %}
     </div>
     <div class="col-md-4">
@@ -94,6 +96,12 @@
         {% endfor %}
       </ul>
     </div>
+
+    <div id="map" style="width: 100%; height: 400px" class="mb-4"
+      data-lat="{{ property.lat }}"
+      data-lng="{{ property.lng }}"
+    ></div>
+
   </div>
 </div>
 {% endblock %}
