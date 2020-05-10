@@ -19,24 +19,32 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <!-- TODO change active link -->
+            {% if current_menu == 'home' %}
               <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{ path('home') }}">Accueil<span class="sr-only"> (current)</span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="{{ path('property.index') }}">Propriétés</a>
               </li>
+            {% elseif current_menu == 'properties' %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ path('home') }}">Accueil</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="{{ path('property.index') }}">Propriétés<span class="sr-only"> (current)</span></a>
+              </li>
+            {% endif %}
           </ul>
           <ul class="navbar-nav">
-          {% if app.user %}
-            <li class="nav-item">
-              <a href="{{ path('logout') }}" class="nav-link">Se déconnecter</a>
-            </li>
-          {% else %}
-            <li class="nav-item">
-              <a href="{{ path('login') }}" class="nav-link">Se connecter</a>
-            </li>
-          {% endif %}
+            {% if app.user %}
+              <li class="nav-item">
+                <a href="{{ path('logout') }}" class="nav-link">Se déconnecter</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a href="{{ path('login') }}" class="nav-link">Se connecter</a>
+              </li>
+            {% endif %}
           </ul>
       </div>
     </nav>
