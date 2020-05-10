@@ -17,6 +17,7 @@
     "dependencies": {
         "leaflet": "^1.6.0",
         "places.js": "^1.18.2",
-        "select2": "^4.0.13"
+        "select2": "^4.0.13",
+        "slick-carousel": "^1.8.1"
     }
 }

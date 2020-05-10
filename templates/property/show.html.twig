@@ -15,19 +15,21 @@
   {% endif %}
   <div class="row">
     <div class="col-md-8">
-      {% if property.pictures is empty %}
-        <img src="{{ '/images/properties/empty.jpg' | imagine_filter('medium') }}"
-          class="" alt=""
-          style="width: 100%; height: auto"
-        />
-      {% else %}
-        {% for picture in property.pictures %}
-          <img src="{{ vich_uploader_asset(picture, 'imageFile') | imagine_filter('medium') }}"
+      <div data-slider>
+        {% if property.pictures is empty %}
+          <img src="{{ '/images/properties/empty.jpg' | imagine_filter('medium') }}"
             class="" alt=""
             style="width: 100%; height: auto"
           />
-        {% endfor %}
-      {% endif %}
+        {% else %}
+          {% for picture in property.pictures %}
+            <img src="{{ vich_uploader_asset(picture, 'imageFile') | imagine_filter('medium') }}"
+              class="" alt=""
+              style="width: 100%; height: auto"
+            />
+          {% endfor %}
+        {% endif %}
+      </div>
     </div>
     <div class="col-md-4">
       <h1>{{ property.title }}</h1>

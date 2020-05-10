@@ -1,8 +1,11 @@
 import '../css/app.css';
-import '../../node_modules/select2/dist/css/select2.css';
+import 'select2/dist/css/select2.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import $ from 'jquery';
 import 'select2';
+import 'slick-carousel';
 import Places from 'places.js';
 import Map from './map';
 
@@ -45,3 +48,8 @@ if (inputAddress){
 }
 
 Map.init();
+
+$('[data-slider]').slick({
+  dots: true,
+  arrows: true
+});
