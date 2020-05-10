@@ -44,6 +44,7 @@ class AdminOptionController extends AbstractController
         }
 
         return $this->render('admin/option/create.html.twig', [
+            'current_menu' => 'admin',
             'option' => $option,
             'form' => $form->createView(),
         ]);
